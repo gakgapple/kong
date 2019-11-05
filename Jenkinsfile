@@ -1,8 +1,7 @@
 pipeline {
-    agent none
+    agent any
     environment{
         KONG_PACKAGE_NAME = 'kong'
-        REPOSITORY_NAME = 'kong-nightly-jenkins'
         REPOSITORY_OS_NAME = "${env.BRANCH_NAME}"
         UPDATE_CACHE = "true"
         DOCKER_CREDENTIALS = credentials('dockerhub')
